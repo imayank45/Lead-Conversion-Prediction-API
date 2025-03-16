@@ -54,7 +54,7 @@ docker run -p 5000:5000 sales_lead_api
    ```sh
    docker login
    ```
-2. **Tag the Docker image:**
+2. **Tag the Docker image:**  (Note: dockerhub username is same as github username)
    ```sh
    docker tag sales_lead_api <your_dockerhub_username>/sales_lead_api
    ```
