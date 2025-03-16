@@ -107,7 +107,7 @@ docker run -p 5000:5000 sales_lead_api
 ---
 
 ## 📋 Tech Stack
-✅ **Python 3.9**  
+✅ **Python**  
 ✅ **Flask**  
 ✅ **Docker**  
 ✅ **AWS EC2**  
