@@ -111,7 +111,7 @@ docker run -p 5000:5000 sales_lead_api
 ✅ **Flask**  
 ✅ **Docker**  
 ✅ **AWS EC2**  
-✅ **Machine Learning Algorithms** (e.g., Logistic Regression, XGBoost)  
+✅ **Machine Learning Algorithms** (RandomForestClassifier)  
 
 ---
 
