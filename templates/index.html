@@ -1,0 +1,142 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Conversion Prediction</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lead Conversion Prediction</h1>
+        
+        <form method="POST" class="prediction-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="Age">Age</label>
+                    <input type="number" id="Age" name="Age" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Gender">Gender</label>
+                    <select id="Gender" name="Gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Location">Location</label>
+                    <select id="Location" name="Location" required>
+                        <option value="Lahore">Lahore</option>
+                        <option value="Sialkot">Sialkot</option>
+                        <option value="Quetta">Quetta</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="LeadSource">Lead Source</label>
+                    <select id="LeadSource" name="LeadSource" required>
+                        <option value="Organic">Organic</option>
+                        <option value="Email">Email</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="TimeSpent">Time Spent (minutes)</label>
+                    <input type="number" id="TimeSpent" name="TimeSpent" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="PagesViewed">Pages Viewed</label>
+                    <input type="number" id="PagesViewed" name="PagesViewed" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="LeadStatus">Lead Status</label>
+                    <select id="LeadStatus" name="LeadStatus" required>
+                        <option value="Cold">Cold</option>
+                        <option value="Warm">Warm</option>
+                        <option value="Hot">Hot</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="EmailSent">Emails Sent</label>
+                    <input type="number" id="EmailSent" name="EmailSent" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="DeviceType">Device Type</label>
+                    <select id="DeviceType" name="DeviceType" required>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Tablet">Tablet</option>
+                        <option value="Desktop">Desktop</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ReferralSource">Referral Source</label>
+                    <select id="ReferralSource" name="ReferralSource" required>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Direct">Direct</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="FormSubmissions">Form Submissions</label>
+                    <input type="number" id="FormSubmissions" name="FormSubmissions" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Downloads">Downloads</label>
+                    <input type="number" id="Downloads" name="Downloads" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="CTR_ProductPage">CTR Product Page</label>
+                    <input type="number" step="0.1" id="CTR_ProductPage" name="CTR_ProductPage" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ResponseTime">Response Time (hours)</label>
+                    <input type="number" id="ResponseTime" name="ResponseTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="FollowUpEmails">Follow Up Emails</label>
+                    <input type="number" id="FollowUpEmails" name="FollowUpEmails" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="SocialMediaEngagement">Social Media Engagement</label>
+                    <input type="number" id="SocialMediaEngagement" name="SocialMediaEngagement" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="PaymentHistory">Payment History</label>
+                    <select id="PaymentHistory" name="PaymentHistory" required>
+                        <option value="Good">Good</option>
+                        <option value="No Payment">No Payment</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Predict Conversion</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result success">
+            <h3>Conversion Probability: {{ prediction }}</h3>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="result error">
+            <h3>{{ error }}</h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
