@@ -7,7 +7,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the pre-trained model
-with open('models/model_rf1.pkl', 'rb') as file:
+with open('models/model_rf2.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Assuming these are the features your model was trained on
